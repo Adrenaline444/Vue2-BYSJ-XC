@@ -1,0 +1,37 @@
+{
+  "id": "3301432",
+  "name": "menu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2076266",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "5056524",
+      "name": "路由器-01",
+      "font_class": "luyouqi-",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "7765181",
+      "name": "书店_学校",
+      "font_class": "shudian_xuexiao",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8783395",
+      "name": "失物招领",
+      "font_class": "dibudaohanglan-",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    }
+  ]
+}
