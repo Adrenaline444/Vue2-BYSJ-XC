@@ -92,9 +92,6 @@
                 }
             }
         },
-        created() {
-            this.status_bg('#ffffff')
-        },
         computed:{
             tab_list_com(){
                 if(this.value == ''){

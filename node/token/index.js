@@ -40,4 +40,43 @@ router.get('/test',(req,res)=>{
     res.send('1')
 })
 
+//商品购买
+router.post('/purchase',async (req,res)=>{
+
+    const value = req.body
+
+    const findSql = 'select * from user where student_id = ?'
+    //查询用户信息
+    const findInfo = await new Promise((resolve, reject)=>{
+        db.query(findSql,[value.user.student_id],(err,result)=>{
+            if (err){
+                reject(err)
+            }else{
+                resolve(result)
+            }
+        })
+    })
+    // console.log(findInfo)
+    //金额相减
+    const moneys = parseInt(findInfo[0].money) - parseInt(value.money)
+    console.log(moneys)
+    console.log(value)
+    if (moneys > 0) {
+        const updataSql = 'update user set money = ? where student_id = ?'
+        const updataDb = await new Promise((resolve, reject)=>{
+            db.query(updataSql,[moneys,value.user.student_id],(err,result)=>{
+                if (err){
+                    reject(err)
+                }else{
+                    resolve(result)
+                }
+            })
+        })
+        console.log(updataDb)
+        res.status(200).json({code:200,msg:'购买成功'})
+    }else{
+        res.send({code:501,msg:'金额不足请充值！'})
+    }
+})
+
 module.exports = router

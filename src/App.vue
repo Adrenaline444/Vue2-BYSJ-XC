@@ -12,28 +12,28 @@
       }
     },
     methods:{
-      keyFocus(){
-        sessionStorage.setItem('footer_name','footer_name')
-        //软键盘弹起
-        document.body.addEventListener('focusin',function () {
-          // console.log('弹起')
-          //获取导航栏的元素
-          let footer = document.getElementsByClassName('van-tabbar--fixed')[0]
-          //监听手机软键盘弹出 并隐藏底部导航栏
-          footer.style.display = 'none'
-        })
-        //软键盘关闭
-        document.body.addEventListener('focusout',function () {
-          // console.log('关闭')
-          //获取导航栏的元素
-          let footer = document.getElementsByClassName('van-tabbar--fixed')[0]
-          //监听手机软键盘关闭 并显示出导航栏
-          footer.style.display = 'flex'
-        })
-      }
+      // keyFocus(){
+      //   sessionStorage.setItem('footer_name','footer_name')
+      //   //软键盘弹起
+      //   document.body.addEventListener('focusin',function () {
+      //     // console.log('弹起')
+      //     //获取导航栏的元素
+      //     let footer = document.getElementsByClassName('van-tabbar--fixed')[0]
+      //     //监听手机软键盘弹出 并隐藏底部导航栏
+      //     footer.style.display = 'none'
+      //   })
+      //   //软键盘关闭
+      //   document.body.addEventListener('focusout',function () {
+      //     // console.log('关闭')
+      //     //获取导航栏的元素
+      //     let footer = document.getElementsByClassName('van-tabbar--fixed')[0]
+      //     //监听手机软键盘关闭 并显示出导航栏
+      //     footer.style.display = 'flex'
+      //   })
+      // }
     },
     created() {
-      this.keyFocus()
+      // this.keyFocus()
     },
   }
 </script>

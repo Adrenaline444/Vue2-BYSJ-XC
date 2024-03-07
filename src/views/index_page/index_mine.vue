@@ -8,6 +8,10 @@
                         <div class="mine-title">
                             <div class="mine-name">新乡工程学院</div>
                             <div class="mine-school">{{user_info.username}}：{{user_info.student_id}}</div>
+
+                          <div class="mine-school">
+                            地址:S4A-303
+                          </div>
                         </div>
                     </div>
                     <div class="mine_money">
@@ -15,6 +19,7 @@
                             <div>账户余额：</div>
                             <div>￥{{user_info.money}}</div>
                         </div>
+
                         <div class="money_btn">
                             <button type="submit" @click="recharge_moneyClick">充值</button>
                         </div>

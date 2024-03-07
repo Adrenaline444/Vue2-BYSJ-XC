@@ -76,7 +76,7 @@ export default {
         // 加载状态结束
         this.loading = false;
         // 数据全部加载完成
-        if (this.list.length >= 40) {
+        if (this.img_data_td.length >= 40) {
           this.finished = true;
         }
       }, 1000);
